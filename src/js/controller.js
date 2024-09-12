@@ -10,10 +10,6 @@ import bookmarksView from "./views/bookmarksView.js";
 import addRecipeView from "./views/addRecipeView.js";
 import { MODAL_CLOSE_MS } from "./config.js";
 
-// if (module.hot) {
-//   module.hot.accepte();
-// }
-
 const controlRecipes = async () => {
   try {
     const id = window.location.hash.slice(1)
@@ -34,7 +30,6 @@ const controlRecipes = async () => {
     recipeView.render(model.state.recipe);
   }
   catch (err) {
-    console.log(err)
     recipeView.renderError()
   }
 }
@@ -116,7 +111,6 @@ const controlAddRecipe = async (newRecipe) => {
     }, MODAL_CLOSE_MS);
   }
   catch (err) {
-    console.log(err, '💥');
     addRecipeView.renderError(err.message)
   }
 }

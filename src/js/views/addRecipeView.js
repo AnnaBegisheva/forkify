@@ -1,5 +1,4 @@
 import View from "./View";
-import previewView from "./previewView";
 
 class AddRecipeView extends View {
     _parentElement = document.querySelector('.upload');
